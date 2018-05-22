@@ -13,7 +13,7 @@ var a App
 func main() {
 	a = App{}
 	a.Initialize("restfavads_mongo")
-	a.Run(":8080")
+	a.Run(":3000")
 }
 
 func GetUsers(w http.ResponseWriter, r *http.Request) {

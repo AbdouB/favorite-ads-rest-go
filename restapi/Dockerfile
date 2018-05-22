@@ -9,4 +9,4 @@ RUN go install restapi
 
 ENTRYPOINT /go/bin/restapi
 
-EXPOSE 8080
+EXPOSE 3000
