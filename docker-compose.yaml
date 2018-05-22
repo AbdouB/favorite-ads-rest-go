@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  api:
+    build: ./restapi
+    container_name: 'restfavads_api'
+    ports:
+      - 8080:8080
+    volumes:
+      - ./restapi:/go/src/restapi
+    links:
+      - database
+
+  database:
+    image: mongo:3.0
+    container_name: 'restfavads_mongo'
+    command: mongod --smallfiles --quiet --logpath=/dev/null
